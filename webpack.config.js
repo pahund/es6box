@@ -9,7 +9,7 @@ module.exports = {
             config = {};
         
         while (id = idGenerator()) {
-            config[id] = [
+            config["box" + id] = [
                 "webpack/hot/dev-server",
                 "./boxes/" + id + "/js/main.js"
             ];

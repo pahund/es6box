@@ -1,6 +1,8 @@
-import Senf from "./Senf.js";
+import FooBar from "./FooBar.js";
 
-var senf = new Senf();
+var foobar = new FooBar();
 
-senf.hello();
+$("#foo").click(foobar.foo.bind(foobar));
+$("#bar").click(foobar.bar.bind(foobar));
+
 
