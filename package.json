@@ -1,6 +1,6 @@
 {
   "name": "es6box",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A sandbox for trying out ES6",
   "main": "index.js",
   "scripts": {
