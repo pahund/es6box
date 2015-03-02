@@ -1,14 +1,14 @@
-import Console from "./Console.js";
+import Console from "../../../js/Console.js";
 
 class FooBar {
     constructor() {
         this.console = new Console();
     }
     foo() {
-        this.console.log("Foo");
+        this.console.log("foo");
     }
     bar() {
-        this.console.log("Bar");
+        this.console.log("bar");
     }
 }
 
