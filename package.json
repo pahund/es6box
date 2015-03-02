@@ -1,0 +1,16 @@
+{
+  "name": "es6box",
+  "version": "0.0.0",
+  "description": "A sandbox for trying out ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Hund <wiekatz@gmail.com>",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "webpack": "~1.4.15",
+    "babel-core": "~4.6.3",
+    "babel-loader": "~4.0.0"
+  }
+}
