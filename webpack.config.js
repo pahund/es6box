@@ -1,16 +1,21 @@
-var webpack = require("webpack");
+var webpack = require("webpack"),
+    numberOfBoxes = 2,
+    idWidth = 3;
 
 module.exports = {
-    entry: {
-        box001: [
-            "webpack/hot/dev-server",
-            "./boxes/001/js/main.js"
-        ],
-        box002: [
-            "webpack/hot/dev-server",
-            "./boxes/002/js/main.js"
-        ]
-    },
+    entry: (function () {
+        var id,
+            idGenerator = idGeneratorF(numberOfBoxes, idWidth),
+            config = {};
+        
+        while (id = idGenerator()) {
+            config[id] = [
+                "webpack/hot/dev-server",
+                "./boxes/" + id + "/js/main.js"
+            ];
+        }
+        return config;
+    }()),
     output: {
         path: __dirname,
         filename: "dist/[name].bundle.js"
@@ -28,3 +33,23 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ]
 };
+
+function zeroFill(number, width) {
+    width -= number.toString().length;
+    if (width > 0) {
+        return new Array(width + (/\./.test(number) ? 2 : 1)).join("0") + number;
+    }
+    return number + "";
+}
+
+function idGeneratorF(max, width) {
+    var current = 1;
+    return function () {
+        if (current > max) {
+            return undefined;
+        }
+        var id = zeroFill(current, width);
+        current++;
+        return id;
+    };
+}
