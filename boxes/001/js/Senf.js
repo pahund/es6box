@@ -1,6 +1,6 @@
 class Senf {
     hello() {
-        console.log("Hello, my dear friends!");
+        console.log("Hello, my dear, dear friends!");
     }
 }
 

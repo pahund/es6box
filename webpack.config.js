@@ -1,13 +1,19 @@
 var webpack = require("webpack");
 
 module.exports = {
-    entry: [
-        "webpack/hot/dev-server",
-        "./js/main.js",
-    ],
+    entry: {
+        box001: [
+            "webpack/hot/dev-server",
+            "./boxes/001/js/main.js"
+        ],
+        box002: [
+            "webpack/hot/dev-server",
+            "./boxes/002/js/main.js"
+        ]
+    },
     output: {
         path: __dirname,
-        filename: "dist/bundle.js"
+        filename: "dist/[name].bundle.js"
     },
     module: {
         loaders: [
