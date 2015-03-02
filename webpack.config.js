@@ -31,7 +31,8 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    devtool: "#source-map"
 };
 
 function zeroFill(number, width) {
