@@ -1,3 +1,5 @@
+var webpack = require("webpack");
+
 module.exports = {
     entry: [
         "webpack/hot/dev-server",
@@ -5,7 +7,7 @@ module.exports = {
     ],
     output: {
         path: __dirname,
-        filename: "bundle.js"
+        filename: "dist/bundle.js"
     },
     module: {
         loaders: [
@@ -15,5 +17,8 @@ module.exports = {
                 loader: "babel-loader"
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };

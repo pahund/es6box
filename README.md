@@ -27,7 +27,7 @@ Install globally:
     
 Run the server in hot reload mode:
 
-    webpack-dev-server --hot --no-info
+    webpack-dev-server
     
 You can then access the server in your browser with this URL:
 [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
