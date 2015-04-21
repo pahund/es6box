@@ -1,0 +1,148 @@
+{
+  "menuItems": [
+    {
+      "item": {
+        "label": "search",
+        "value": "Search"
+      },
+      "subMenu": [
+        {
+          "item": {
+            "label": "cars",
+            "value": "Cars",
+            "link": {
+              "url": "http://suchen.mobile.de/fahrzeuge/auto/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "motorbikes",
+            "value": "Motorbikes",
+            "link": {
+              "url": "http://suchen.mobile.de/fahrzeuge/motorrad/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "motorhomes",
+            "value": "Motorhomes",
+            "link": {
+              "url": "http://suchen.mobile.de/fahrzeuge/wohnmobil/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "trucks",
+            "value": "Trucks",
+            "link": {
+              "url": "http://suchen.mobile.de/fahrzeuge/lkw/?lang=en"
+            }
+          },
+          "subMenu": []
+        }
+      ]
+    },
+    {
+      "item": {
+        "label": "offer",
+        "value": "Offer"
+      },
+      "subMenu": [
+        {
+          "item": {
+            "label": "cars",
+            "value": "Cars",
+            "link": {
+              "url": "http://www.mobile.de/auto-verkaufen/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "motorbikes",
+            "value": "Motorbikes",
+            "link": {
+              "url": "https://auto-verkaufen.mobile.de/anbieten/syi/index.html?vc=Motorbike&lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "motorhomes",
+            "value": "Motorhomes",
+            "link": {
+              "url": "https://auto-verkaufen.mobile.de/anbieten/syi/index.html?vc=Motorhome&lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "trucks",
+            "value": "Trucks",
+            "link": {
+              "url": "https://auto-verkaufen.mobile.de/anbieten/syi/index.html?vc=VanUpTo7500&lang=en"
+            }
+          },
+          "subMenu": []
+        }
+      ]
+    },
+    {
+      "item": {
+        "label": "inform",
+        "value": "Inform"
+      },
+      "subMenu": [
+        {
+          "item": {
+            "label": "topicOfTheMonth",
+            "value": "Topic of the Month",
+            "link": {
+              "url": "http://www.mobile.de/magazin/news/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "advisor",
+            "value": "Advice and Security",
+            "link": {
+              "url": "http://www.mobile.de/magazin/ratgeber/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "testsAndComparisons",
+            "value": "Tests & Comparisons",
+            "link": {
+              "url": "http://www.mobile.de/magazin/tests_und_vergleiche/?lang=en"
+            }
+          },
+          "subMenu": []
+        },
+        {
+          "item": {
+            "label": "financingAndInsurance",
+            "value": "Financing & Insurance",
+            "link": {
+              "url": "http://www.mobile.de/magazin/finanzierung_und_versicherung/?lang=en"
+            }
+          },
+          "subMenu": []
+        }
+      ]
+    }
+  ]
+}
