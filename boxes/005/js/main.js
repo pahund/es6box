@@ -19,9 +19,13 @@ function updateResults() {
 }
 
 function updateResult(el, testf) {
-    if (testf(Number.parseFloat(elements.num.val()))) {
+    if (testf(getUserInput())) {
         el.addClass("ok");
         return;
     }
     el.removeClass("ok");
+}
+
+function getUserInput() {
+    return Number.parseFloat(elements.num.val());
 }
