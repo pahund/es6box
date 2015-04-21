@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    numberOfBoxes = 3,
+    numberOfBoxes = 4,
     idWidth = 3;
 
 module.exports = {
