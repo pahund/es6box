@@ -32,3 +32,29 @@ body {
     margin-bottom: 10px;
 }
 
+.result {
+    font-family: monospace;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: lightpink;
+}
+
+.result .glyphicon-ok {
+    display: none;
+}
+
+.result.ok {
+    background-color: lightgreen;
+}
+
+.result.ok .glyphicon-ok {
+    display: inline-block;
+}
+
+.result.ok .glyphicon-remove {
+    display: none;
+}
+
+.result.blue {
+    background-color: lightblue;
+}
