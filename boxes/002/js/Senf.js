@@ -1,6 +1,7 @@
 class Senf {
     hello() {
-        console.log("Das arme Fräulein Kennedy");
+        console.log("Hello!");
+        return "Hello!"
     }
 }
 

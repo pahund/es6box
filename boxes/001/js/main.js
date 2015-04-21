@@ -1,4 +1,4 @@
-import FooBar from "./FooBar.js";
+import FooBar from "./FooBar";
 
 var foobar = new FooBar();
 

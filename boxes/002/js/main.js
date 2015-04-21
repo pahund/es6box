@@ -1,6 +1,6 @@
 import Senf from "./Senf.js";
 
-var senf = new Senf();
+let senf = new Senf();
 
-senf.hello();
+console.log(senf.hello());
 

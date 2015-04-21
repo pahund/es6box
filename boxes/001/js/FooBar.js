@@ -1,4 +1,4 @@
-import Console from "../../../js/Console.js";
+import Console from "../../../js/Console";
 
 class FooBar {
     constructor() {

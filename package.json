@@ -8,9 +8,12 @@
   },
   "author": "Patrick Hund <wiekatz@gmail.com>",
   "license": "BSD-2-Clause",
+  "private": true,
   "devDependencies": {
     "webpack": "~1.4.15",
     "babel-core": "~4.6.3",
-    "babel-loader": "~4.0.0"
+    "babel-loader": "~4.0.0",
+    "babel": "~5.1.10",
+    "wallaby-webpack": "0.0.4"
   }
 }
