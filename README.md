@@ -22,6 +22,10 @@ Open up one of the ES6 boxes (demos) in your browser:
 
 * [Box 001](boxes/001/index.html)
 * [Box 002](boxes/002/index.html)
+* [Box 003](boxes/003/index.html)
+* [Box 004](boxes/004/index.html)
+* [Box 005](boxes/005/index.html)
+* [Box 006](boxes/006/index.html)
 
 ## Dev Mode
 

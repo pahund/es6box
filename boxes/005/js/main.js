@@ -10,12 +10,8 @@ elements.num.keyup(updateResults);
 
 function updateResults() {
     let { isi, issi } = elements;
-    updateResult(isi, n => {
-        return Number.isInteger(n);
-    });
-    updateResult(issi, n => {
-        return Number.isSafeInteger(n);
-    });
+    updateResult(isi, n => Number.isInteger(n));
+    updateResult(issi, n => Number.isSafeInteger(n));
 }
 
 function updateResult(el, testf) {

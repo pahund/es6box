@@ -12,23 +12,21 @@ let searchTerm = "foo",
 elements.txt.keyup(updateResults);
 
 function updateResults() {
-    let { incl, sw, ew, txt, rep } = elements;
-    updateResult(incl, t => {
-        return t.includes(searchTerm);
-    });
-    updateResult(sw, t => {
-        return t.startsWith(searchTerm);
-    });
-    updateResult(ew, t => {
-        return t.endsWith(searchTerm);
-    });
-    rep.html(txt.val().repeat(3));
+    let { incl, sw, ew, rep } = elements;
+    updateResult(incl, t => t.includes(searchTerm));
+    updateResult(sw, t => t.startsWith(searchTerm));
+    updateResult(ew, t => t.endsWith(searchTerm));
+    rep.html(getUserInput().repeat(3));
 }
 
 function updateResult(el, testf) {
-    if (testf(elements.txt.val())) {
+    if (testf(getUserInput())) {
         el.addClass("ok");
         return;
     }
     el.removeClass("ok");
+}
+
+function getUserInput() {
+    return elements.txt.val();
 }
