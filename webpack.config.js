@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    numberOfBoxes = 2,
+    numberOfBoxes = 3,
     idWidth = 3;
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
         var id,
             idGenerator = idGeneratorF(numberOfBoxes, idWidth),
             config = {};
-        
+
         while (id = idGenerator()) {
             config["box" + id] = [
                 "webpack/hot/dev-server",

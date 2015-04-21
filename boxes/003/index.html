@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ES6 Box 002</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="css/003.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>ES6 Box 003</h1>
+                    <h2>New String methods</h2>
+                    <p>
+                        See corresponding chapter from <a href="https://leanpub.com/understandinges6/">Understanding ECMA Script 6</a>
+                        by <a href="https://twitter.com/slicknet">Nicholas C. Zakas</a>:
+                        <b><a href="https://leanpub.com/understandinges6/read/#leanpub-other-string-changes">Other String Changes</a></b>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label for="text">Enter a text</label>
+                    <input id="text" name="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p id="startsWith" class="result">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        startsWith("foo")
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p id="includes" class="result">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        includes("foo")
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p id="endsWith" class="result">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        endsWith("foo")
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="../../dist/box003.bundle.js"></script>
+    </body>
+</html>
