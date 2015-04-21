@@ -5,7 +5,8 @@ let searchTerm = "foo",
         txt: $("#text"),
         incl: $("#includes"),
         sw: $("#startsWith"),
-        ew: $("#endsWith")
+        ew: $("#endsWith"),
+        rep: $("#repeat")
     };
 
 elements.txt.keyup(updateResults);
@@ -20,6 +21,7 @@ function updateResults() {
     updateResult(elements.ew, t => {
         return t.endsWith(searchTerm);
     });
+    elements.rep.html(elements.txt.val().repeat(3));
 }
 
 function updateResult(el, testf) {
