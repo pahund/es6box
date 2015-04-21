@@ -8,7 +8,7 @@ code that runs in current browsers.
 Uses [Twitter Bootstrap](http://getbootstrap.com/) and [jQuery](http://jquery.com/) for presenting the demo output and
 results.
 
-## Intallation
+## Installation
 
 Install webpack and the webpack Babel loader plugin with npm:
 
@@ -38,3 +38,7 @@ Run the server in hot reload mode:
 You can then access the server in your browser with this URL:
 [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
 
+## Jasmine Tests
+
+Some of the boxes feature ES6 Jasmine tests. If you use an IntelliJ IDE (i.e. Webstorm, IDEA, etc.), you can run these
+using [wallaby.js](http://wallabyjs.com/).
