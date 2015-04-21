@@ -12,16 +12,17 @@ let searchTerm = "foo",
 elements.txt.keyup(updateResults);
 
 function updateResults() {
-    updateResult(elements.incl, t => {
+    let { incl, sw, ew, txt, rep } = elements;
+    updateResult(incl, t => {
         return t.includes(searchTerm);
     });
-    updateResult(elements.sw, t => {
+    updateResult(sw, t => {
         return t.startsWith(searchTerm);
     });
-    updateResult(elements.ew, t => {
+    updateResult(ew, t => {
         return t.endsWith(searchTerm);
     });
-    elements.rep.html(elements.txt.val().repeat(3));
+    rep.html(txt.val().repeat(3));
 }
 
 function updateResult(el, testf) {
