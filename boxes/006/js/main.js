@@ -73,3 +73,38 @@ let person = (name => {
 
 cons.log("IIFE with arrow function: " + person.getName());
 
+function utilsf(description) {
+    let id = Symbol(description);
+    let api = {
+        logMe() {
+            cons.log(id.toString(), "yellow");
+        },
+        [description]() {
+            cons.log(description, "cyan");
+        }
+    };
+    return api;
+}
+
+cons.log("utils ID: ");
+let utils = utilsf("hey ho");
+utils.logMe();
+
+let logThisStuff = function() { cons.log("log this stuff", "cyan") };
+
+function logThatStuff() {
+    cons.log("log that stuff", "cyan");
+}
+
+let logMoreStuff = () => cons.log("log more stuff", "cyan");
+
+function execute(...functions) {
+    functions.forEach(func => {
+        cons.log("Executing " + (func.name.length ? func.name : "anonymous function") + ":");
+        func();
+    });
+}
+
+execute(logThatStuff, logThisStuff, logMoreStuff, utils.logMe, utils["hey ho"]);
+
+
