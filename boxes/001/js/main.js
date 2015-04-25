@@ -1,3 +1,4 @@
+import "../../../node_modules/babel/polyfill";
 import FooBar from "./FooBar";
 
 var foobar = new FooBar();

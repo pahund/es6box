@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    numberOfBoxes = 8,
+    numberOfBoxes = 9,
     idWidth = 3;
 
 module.exports = {
@@ -25,7 +25,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                //loader: "babel-loader"
+                loader: "babel-loader?optional=runtime"
             }
         ]
     },
