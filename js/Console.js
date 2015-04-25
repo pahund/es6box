@@ -1,29 +1,44 @@
+const _getHTML = Symbol("private method for creating HTML code of a log line"),
+    _scrollDown = Symbol("private method for scrolling the console to the line that was added last"),
+    _removeNew = Symbol("private method for removing class \"new\" from the last line"),
+    _doLog = Symbol("private method to do the actual logging to the console");
+
 class Console {
     constructor() {
-        this.$c = $("#console");
-        this.handle = undefined;
+        this.$console = $("#console");
     }
+
     log(msg, color) {
-        window.clearTimeout(this.handle);
-        this.$c.find("p").last().removeClass("new");
-        this.$c.append("<p class=\"new" + (color ? " " + color : "") + "\">" + msg + "</p>");
-        this.handle = window.setTimeout(() => {
-            this.$c.scrollTop(this.$c.prop("scrollHeight"));
-        }, 100);
+        this.handle = Console[_doLog](this.handle, this.$console, msg, color);
     }
+
     static createLogFunction(color) {
        return (() => {
-            const $cons = $("#console");
+            const $console = $("#console");
             let handle;
-            return function (...messages) {
-                window.clearTimeout(handle);
-                $cons.find("p").last().removeClass("new");
-                $cons.append("<p class=\"new" + (color ? " " + color : "") + "\">" + messages.join(" ") + "</p>");
-                handle = window.setTimeout(() => {
-                    $cons.scrollTop($cons.prop("scrollHeight"));
-                }, 100);
-            }
+            return (...messages) => handle = Console[_doLog](handle, $console, messages.join(" "), color);
         })();
+    }
+
+    static [_doLog](handle, $console, msg, color) {
+        window.clearTimeout(handle);
+        Console[_removeNew]($console);
+        $console.append(Console[_getHTML](msg, color));
+        return Console[_scrollDown]($console);
+    }
+
+    static [_getHTML](msg, color) {
+        return "<p class=\"new" + (color ? " " + color : "") + "\">" + msg + "</p>";
+    }
+
+    static [_scrollDown]($console) {
+        return window.setTimeout(() => {
+            $console.scrollTop($console.prop("scrollHeight"));
+        }, 100);
+    }
+
+    static [_removeNew]($console) {
+        $console.find("p").last().removeClass("new");
     }
 }
 

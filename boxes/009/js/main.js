@@ -13,5 +13,5 @@ function *createIterator() {
 let iterator = createIterator();
 
 for (let i of iterator) {
-    cons.log(i);
+    cons.log(i, "cyan");
 }
