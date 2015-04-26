@@ -9,7 +9,7 @@
     },
     "rules": {
         // use double quotes
-        "quotes": [2, "double"],
+        "quotes": [ 2, "double" ],
 
         // indent with 4 spaces
         "indent": 2,
@@ -17,13 +17,13 @@
         // exactly one variable declaration per type per function (var) or block (let or const)
         // does not work properly with ESLint 0.19.0 / webpack ESLint loader 0.10.0, waiting for pull request:
         // https://github.com/MoOx/eslint-loader/pull/36
-        // "one-var": [2, "always"],
+        // "one-var": [ 2, "always" ],
 
         // only use let and const for variables, not var
         "no-var": 2,
 
         // limit cyclomatic complexity to 10
-        "complexity": [2, 10],
+        "complexity": [ 2, 10 ],
 
         // when using "for in" to iterate object properties, check it object has own property
         "guard-for-in": 2,
@@ -38,14 +38,17 @@
 
         "space-before-blocks": 2,
 
-        "space-before-function-paren": [2, {
+        "space-before-function-paren": [ 2, {
             "anonymous": "always",
             "named": "never"
         }],
 
-        "space-in-parens": [2, "never"],
+        "space-in-parens": [ 2, "never" ],
 
-        "generator-star-spacing": [2, "before"]
+        // buggy in in ESLint 0.19.0, uncomment when fixed
+        // "space-in-brackets": [ 2, "always" ],
+
+        "generator-star-spacing": [ 2, "before" ]
 
     }
 }
