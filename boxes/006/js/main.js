@@ -3,6 +3,11 @@ import Console from "../../../js/Console";
 
 const cons = new Console();
 
+let person,
+    utils,
+    logThisStuff,
+    logMoreStuff;
+
 function defaultGreeting() {
     cons.log("Wazzup dude?");
 }
@@ -62,7 +67,7 @@ showPersonalData({
 
 cons.log("Name of the function that shows the personal data: " + showPersonalData.name);
 
-let person = (name => {
+person = (name => {
     return {
         getName() {
             return name;
@@ -74,8 +79,10 @@ let person = (name => {
 cons.log("IIFE with arrow function: " + person.getName());
 
 function utilsf(description) {
-    let id = Symbol(description);
-    let api = {
+    let id = Symbol(description),
+        api;
+
+    api = {
         logMe() {
             cons.log(id.toString(), "yellow");
         },
@@ -87,16 +94,16 @@ function utilsf(description) {
 }
 
 cons.log("utils ID: ");
-let utils = utilsf("hey ho");
+utils = utilsf("hey ho");
 utils.logMe();
 
-let logThisStuff = () => cons.log("log this stuff", "cyan");
+logThisStuff = () => cons.log("log this stuff", "cyan");
 
 function logThatStuff() {
     cons.log("log that stuff", "cyan");
 }
 
-let logMoreStuff = () => cons.log("log more stuff", "cyan");
+logMoreStuff = () => cons.log("log more stuff", "cyan");
 
 function execute(...functions) {
     functions.forEach(func => {

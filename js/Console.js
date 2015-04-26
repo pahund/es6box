@@ -13,7 +13,7 @@ class Console {
     }
 
     static createLogFunction(color) {
-       return (() => {
+        return (() => {
             const $console = $("#console");
             let handle;
             return (...messages) => handle = Console[doLog](handle, $console, messages.join(" "), color);

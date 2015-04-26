@@ -1,6 +1,8 @@
 import "../../../node_modules/babel/polyfill";
 import Console from "../../../js/Console";
 const cons = new Console();
+let iterator,
+    i;
 
 function *createIterator() {
     yield 1;
@@ -8,8 +10,8 @@ function *createIterator() {
     yield 3;
 }
 
-let iterator = createIterator();
+iterator = createIterator();
 
-for (let i of iterator) {
+for (i of iterator) {
     cons.log(i, "cyan");
 }
