@@ -1,11 +1,10 @@
 var webpack = require("webpack"),
-    numberOfBoxes = 9,
-    idWidth = 3;
+    numberOfBoxes = 9;
 
 module.exports = {
     entry: (function () {
         var id,
-            idGenerator = idGeneratorF(numberOfBoxes, idWidth),
+            idGenerator = idGeneratorF(numberOfBoxes),
             config = {};
 
         while (id = idGenerator()) {
@@ -25,8 +24,12 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                //loader: "babel-loader"
                 loader: "babel-loader?optional=runtime"
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader"
             }
         ]
     },
@@ -46,6 +49,9 @@ function zeroFill(number, width) {
 
 function idGeneratorF(max, width) {
     var current = 1;
+    if (typeof width === "undefined") {
+        width = 3;
+    }
     return function () {
         if (current > max) {
             return undefined;

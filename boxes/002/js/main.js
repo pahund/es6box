@@ -1,7 +1,9 @@
 import "../../../node_modules/babel/polyfill";
 import Senf from "./Senf.js";
+import Console from "../../../js/Console";
 
-let senf = new Senf();
+let cons = new Console(),
+    senf = new Senf();
 
-console.log(senf.hello());
+cons.log(senf.hello());
 

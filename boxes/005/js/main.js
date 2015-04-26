@@ -6,12 +6,8 @@ let elements = {
         issi: $("#isSafeInteger")
     };
 
-elements.num.keyup(updateResults);
-
-function updateResults() {
-    let { isi, issi } = elements;
-    updateResult(isi, n => Number.isInteger(n));
-    updateResult(issi, n => Number.isSafeInteger(n));
+function getUserInput() {
+    return Number.parseFloat(elements.num.val());
 }
 
 function updateResult(el, testf) {
@@ -22,6 +18,11 @@ function updateResult(el, testf) {
     el.removeClass("ok");
 }
 
-function getUserInput() {
-    return Number.parseFloat(elements.num.val());
+function updateResults() {
+    let { isi, issi } = elements;
+    updateResult(isi, n => Number.isInteger(n));
+    updateResult(issi, n => Number.isSafeInteger(n));
 }
+
+elements.num.keyup(updateResults);
+

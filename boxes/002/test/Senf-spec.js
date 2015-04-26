@@ -13,11 +13,5 @@ describe("Senf", () => {
         let senf = new Senf();
         expect(senf.hello()).toBe("Hello!");
     });
-    it("should log hello", () => {
-        spyOn(console, "log");
-        let senf = new Senf();
-        senf.hello();
-        expect(console.log).toHaveBeenCalledWith("Hello!");
-    });
 });
 

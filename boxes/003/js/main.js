@@ -9,14 +9,8 @@ let searchTerm = "foo",
         rep: $("#repeat")
     };
 
-elements.txt.keyup(updateResults);
-
-function updateResults() {
-    let { incl, sw, ew, rep } = elements;
-    updateResult(incl, t => t.includes(searchTerm));
-    updateResult(sw, t => t.startsWith(searchTerm));
-    updateResult(ew, t => t.endsWith(searchTerm));
-    rep.html(getUserInput().repeat(3));
+function getUserInput() {
+    return elements.txt.val();
 }
 
 function updateResult(el, testf) {
@@ -27,6 +21,12 @@ function updateResult(el, testf) {
     el.removeClass("ok");
 }
 
-function getUserInput() {
-    return elements.txt.val();
+function updateResults() {
+    let { incl, sw, ew, rep } = elements;
+    updateResult(incl, t => t.includes(searchTerm));
+    updateResult(sw, t => t.startsWith(searchTerm));
+    updateResult(ew, t => t.endsWith(searchTerm));
+    rep.html(getUserInput().repeat(3));
 }
+
+elements.txt.keyup(updateResults);

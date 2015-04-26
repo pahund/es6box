@@ -3,6 +3,38 @@ import Console from "../../../js/Console";
 
 const cons = new Console();
 
+function defaultGreeting() {
+    cons.log("Wazzup dude?");
+}
+
+function getRandomGreeting() {
+    return Math.random() < 0.5 ? defaultGreeting : () => {
+        cons.log("Hello, how are you?");
+    };
+}
+
+function greet(delay, greetf = defaultGreeting) {
+    cons.log("Oh, vee hav a visitor, let's greet him...");
+    window.setTimeout(greetf, delay);
+}
+
+function greet2(delay, greetf = getRandomGreeting()) {
+    greet(delay, greetf);
+}
+
+function sum(...summands) {
+    let result = 0;
+    summands.forEach(summand => result += summand);
+    return result;
+}
+
+function showPersonalData({ firstName, lastName, age, sex }) {
+    cons.log("First name: " + firstName);
+    cons.log("Last name: " + lastName);
+    cons.log("Age: " + age);
+    cons.log("Sex: " + sex);
+}
+
 $("#greet1").click(() => {
     greet(1000, () => {
         cons.log("Good afternoon, Sir. How do you do?");
@@ -29,38 +61,6 @@ showPersonalData({
 });
 
 cons.log("Name of the function that shows the personal data: " + showPersonalData.name);
-
-function greet(delay, greetf = defaultGreeting) {
-    cons.log("Oh, vee hav a visitor, let's greet him...");
-    window.setTimeout(greetf, delay);
-}
-
-function greet2(delay, greetf = getRandomGreeting()) {
-    greet(delay, greetf);
-}
-
-function defaultGreeting() {
-    cons.log("Wazzup dude?");
-}
-
-function getRandomGreeting() {
-    return Math.random() < 0.5 ? defaultGreeting : () => {
-        cons.log("Hello, how are you?");
-    };
-}
-
-function sum(...summands) {
-    let sum = 0;
-    summands.forEach(s => sum += s);
-    return sum;
-}
-
-function showPersonalData({ firstName, lastName, age, sex }) {
-    cons.log("First name: " + firstName);
-    cons.log("Last name: " + lastName);
-    cons.log("Age: " + age);
-    cons.log("Sex: " + sex);
-}
 
 let person = (name => {
     return {
@@ -90,7 +90,7 @@ cons.log("utils ID: ");
 let utils = utilsf("hey ho");
 utils.logMe();
 
-let logThisStuff = function() { cons.log("log this stuff", "cyan") };
+let logThisStuff = () => cons.log("log this stuff", "cyan");
 
 function logThatStuff() {
     cons.log("log that stuff", "cyan");

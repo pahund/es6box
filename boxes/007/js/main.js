@@ -7,7 +7,7 @@ patrick.sayName();
 
 patrick.name = "pat";
 
-patrick._name = "patrizius";
+patrick.name2 = "patrizius";
 
 patrick.sayName();
 
