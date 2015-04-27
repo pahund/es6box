@@ -15,9 +15,7 @@
         "indent": 2,
 
         // exactly one variable declaration per type per function (var) or block (let or const)
-        // does not work properly with ESLint 0.19.0 / webpack ESLint loader 0.10.0, waiting for pull request:
-        // https://github.com/MoOx/eslint-loader/pull/36
-        // "one-var": [ 2, "always" ],
+         "one-var": [ 2, "always" ],
 
         // only use let and const for variables, not var
         "no-var": 2,
