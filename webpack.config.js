@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    numberOfBoxes = 9;
+    numberOfBoxes = 10;
 
 module.exports = {
     entry: (function () {
