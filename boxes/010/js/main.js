@@ -29,7 +29,7 @@ function getUser() {
             if (email.match(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i) === null) {
                 return Maybe.NOTHING;
             }
-            return new Maybe({
+            return new Identity({
                 address: email,
                 url: "mailto:" + email
             });
