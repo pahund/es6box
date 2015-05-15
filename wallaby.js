@@ -4,7 +4,7 @@
  * @author <a href="mailto:pahund@team.mobile.de">Patrick Hund</a>
  * @since 18 Apr 2015
  */
-var babel = require("babel"),
+const babel = require("babel"),
     wallabyWebpack = require("wallaby-webpack");
 
 module.exports = function () {
@@ -29,9 +29,9 @@ module.exports = function () {
             })
         },
 
-        postprocessor: wallabyWebpack({}),
+        postprocessor: wallabyWebpack(),
 
-        bootstrap: function () {
+        bootstrap: () => {
             window.__moduleBundler.loadTests();
         }
     };
