@@ -1,5 +1,5 @@
 class Maybe {
-    constructor(value, isEmpty) {
+    constructor(value, isEmpty = false) {
         this.value = value;
         this.isEmpty = isEmpty;
     }
