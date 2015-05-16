@@ -45,6 +45,14 @@ body {
     color: red;
 }
 
+.console p.pink {
+    color: hotpink;
+}
+
+.console p.new.pink {
+    color: deeppink;
+}
+
 .full-width {
     width: 100%;
 }
