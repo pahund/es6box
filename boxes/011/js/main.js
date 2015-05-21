@@ -24,6 +24,7 @@ function testPromise() {
 
 $("#foo").click(testPromise);
 
+$("#bar").prop("disabled", false);
 future = futureEvents.on("bar");
 
 future.then(() => cons.log("future event 1", "cyan"));

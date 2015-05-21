@@ -13,9 +13,7 @@ const futureEvents = (() => {
 
     function on(topic) {
         let callback,
-            promise = new Promise(resolve => {
-                callback = () => resolve();
-            });
+            promise = new Promise(resolve => callback = resolve);
         topics[topic] = callback;
         return promise;
     }
