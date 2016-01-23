@@ -1,10 +1,10 @@
-import "../../../node_modules/babel/polyfill";
+import "babel-polyfill";
 
 let elements = {
-        num: $("#number"),
-        isi: $("#isInteger"),
-        issi: $("#isSafeInteger")
-    };
+    num: $("#number"),
+    isi: $("#isInteger"),
+    issi: $("#isSafeInteger")
+};
 
 function getUserInput() {
     return Number.parseFloat(elements.num.val());

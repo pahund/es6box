@@ -1,4 +1,4 @@
-import "../../../node_modules/babel/polyfill";
+import "babel-polyfill";
 
 let searchTerm = "foo",
     elements = {

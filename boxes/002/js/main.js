@@ -1,4 +1,4 @@
-import "../../../node_modules/babel/polyfill";
+import "babel-polyfill";
 import Senf from "./Senf.js";
 import Console from "../../../js/Console";
 

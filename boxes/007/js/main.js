@@ -1,4 +1,4 @@
-import "../../../node_modules/babel/polyfill";
+import "babel-polyfill";
 import Person from "./Person";
 
 let patrick = new Person("Patrick"),

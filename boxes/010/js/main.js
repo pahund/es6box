@@ -1,4 +1,4 @@
-import "../../../node_modules/babel/polyfill";
+import "babel-polyfill";
 import Console from "../../../js/Console";
 import Identity from "./Identity";
 import Maybe from "./Maybe";
